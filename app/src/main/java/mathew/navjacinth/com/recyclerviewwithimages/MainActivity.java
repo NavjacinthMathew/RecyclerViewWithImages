@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         employeeArrayList = new ArrayList<>();
-        employeeArrayList.add(new Employee("Employee1", "emp1@example.com", "123456789"));
-        employeeArrayList.add(new Employee("Employee2", "emp2@example.com", "987654321"));
-        employeeArrayList.add(new Employee("Employee3", "emp3@example.com", "789456123"));
-        employeeArrayList.add(new Employee("Employee4", "emp4@example.com", "321654987"));
+        employeeArrayList.add(new Employee(R.drawable.image1, "Employee1", "emp1@example.com", "123456789"));
+        employeeArrayList.add(new Employee(R.drawable.image2, "Employee2", "emp2@example.com", "987654321"));
+        employeeArrayList.add(new Employee(R.drawable.image3, "Employee3", "emp3@example.com", "789456123"));
+        employeeArrayList.add(new Employee(R.drawable.image4, "Employee4", "emp4@example.com", "321654987"));
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 

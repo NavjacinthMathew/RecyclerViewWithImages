@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
 
     @Override
     public void onBindViewHolder(EmployeeViewHolder holder, int position) {
+        holder.imgEmp.setImageResource(dataList.get(position).getEmployeeImage());
         holder.txtEmpName.setText(dataList.get(position).getEmployeeName());
         holder.txtEmpEmail.setText(dataList.get(position).getEmployeeEmail());
         holder.txtEmpPhone.setText(dataList.get(position).getEmployeePhone());
@@ -41,10 +43,12 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
 
     class EmployeeViewHolder extends RecyclerView.ViewHolder {
 
+        ImageView imgEmp;
         TextView txtEmpName, txtEmpEmail, txtEmpPhone;
 
         EmployeeViewHolder(View itemView) {
             super(itemView);
+            imgEmp = (ImageView) itemView.findViewById(R.id.img_employee);
             txtEmpName = (TextView) itemView.findViewById(R.id.txt_employee_name);
             txtEmpEmail = (TextView) itemView.findViewById(R.id.txt_employee_email);
             txtEmpPhone = (TextView) itemView.findViewById(R.id.txt_employee_phone);
