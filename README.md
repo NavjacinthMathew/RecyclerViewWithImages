@@ -1,6 +1,6 @@
 # RecyclerView with Images
 
-This is a demo project to demonstrate RecyclerView and CardView library on Android
+This is a demo project to demonstrate RecyclerView and CardView library on Android, with images inside each RecyclerView Item
 
 ## License
 
